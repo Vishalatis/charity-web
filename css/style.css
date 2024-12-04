@@ -1030,6 +1030,7 @@ body,
 .top-bar-area {
   padding: 10px 0;
   position: relative;
+  background: #0b2247 none repeat scroll 0 0;
 }
 
 .top-bar-area.shadow::after {
@@ -5963,4 +5964,300 @@ footer .f-item.newsletter form .input-group-addon button {
 }
 .demo-footer .footer-bottom {
   margin-top: 0;
+}
+
+/* board committee */
+.board_commiitee_card {
+  background: #ffffff;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.06);
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.board_commiitee_card:hover {
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px); /* Subtle hover lift */
+}
+
+.board_commiitee_card .thumb {
+  overflow: hidden;
+  position: relative;
+}
+
+.board_commiitee_card .thumb img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.35s ease-in-out; /* Smooth zoom effect */
+}
+
+.board_commiitee_card:hover .thumb img {
+  transform: scale(1.2); /* Zoom on hover */
+}
+
+.board_commiitee_card .thumb .overlay-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: #ffffff;
+  display: none; /* Initially hidden */
+  z-index: 10;
+}
+
+.board_commiitee_card:hover .thumb .overlay-icon {
+  display: block; /* Show icon on hover */
+}
+
+.board_commiitee_card .thumb span.date {
+  background: #c89d43;
+  bottom: 0;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  left: 0;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  width: 80px;
+  z-index: 9;
+}
+
+.board_commiitee_card .text-center {
+  margin-top: 20px;
+}
+
+.board_commiitee_card .text-center h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #3463d7;
+  margin: 0;
+}
+
+.board_commiitee_card .text-center p {
+  font-size: 12px;
+  color: #000;
+  /* margin-top: 5px; */
+}
+
+.tabs-responsive {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.tabs-responsive li {
+  flex: 1 1 auto;
+  text-align: center;
+  margin-bottom: 10px; /* Space between rows on smaller screens */
+}
+
+.tabs-responsive li a {
+  display: block;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.tabs-responsive li a:hover {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .tabs-responsive {
+    flex-direction: column; /* Stack tabs vertically */
+  }
+
+  .tabs-responsive li {
+    width: 100%; /* Full width for each tab */
+  }
+}
+
+/* ==========================user certificate ============================================= */
+@font-face {
+  font-family: "Pinyon Script";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/pinyonscript/v22/6xKpdSJbL9-e9LuoeQiDRQR8WOXaPw.ttf)
+    format("truetype");
+}
+.pm-certificate-container {
+  position: relative;
+  width: 100%; /* Responsive width */
+  max-width: 800px; /* Maintain the original max width */
+  height: auto; /* Allow height to adjust based on content */
+  background-color: #618597;
+  padding: 30px;
+  color: #333;
+  font-family: "Open Sans", sans-serif;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  margin: 0 auto; /* Center the container */
+}
+
+.pm-certificate-container .outer-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #fff;
+  pointer-events: none; /* Prevent interference */
+}
+
+.pm-certificate-container .inner-border {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 2px solid #fff;
+  pointer-events: none;
+}
+
+.pm-certificate-container .pm-certificate-border {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #e1e5f0;
+  background-color: #ffffff;
+  background-image: url("../images/bg-flower.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+}
+
+.pm-certificate-header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.pm-certificate-title {
+  margin-bottom: 20px;
+}
+
+.pm-certificate-title img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.pm-certificate-header img {
+  width: 100%;
+  max-height: 100px;
+  object-fit: contain;
+}
+.user_cetificate_name h2 {
+  font-size: 50px;
+  margin: 30px;
+  font-weight: bold;
+  font-family: "Pinyon Script", cursive;
+  background: linear-gradient(90deg, #ff7e5f, #4e70d6);
+  -webkit-background-clip: text; /* Clip gradient to text */
+  -webkit-text-fill-color: transparent; /* Make the background visible */
+  text-align: center; /* Optional: Center align */
+}
+.pm-certificate-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #c89d43;
+  margin-top: 10px;
+}
+
+.user_cetificate_description h2 {
+  font-weight: bold;
+  color: #0f8ea7;
+  font-size: 22px;
+}
+.user_certificate_userimg {
+  margin-bottom: 20px;
+}
+.user_certificate_username h2 {
+  font-weight: bold;
+  color: #c89d43;
+  font-size: 22px;
+  margin: 0;
+}
+.user_certificate_username p {
+  font-weight: bold;
+  color: #c89d43;
+  font-size: 22px;
+  margin-bottom: 50px;
+}
+
+.user_certificate_date h2 {
+  font-weight: bold;
+  color: #0f8ea7;
+  font-size: 18px;
+}
+
+.user_certificate_date p {
+  font-weight: bold;
+  color: #000;
+  font-size: 18px;
+}
+.user_certificate_organization h2 {
+  font-weight: bold;
+  color: #0f8ea7;
+  font-size: 18px;
+}
+
+.user_certificate_organization p {
+  font-weight: bold;
+  color: #000;
+  font-size: 18px;
+}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .pm-certificate-container {
+    padding: 20px;
+  }
+
+  .pm-certificate-title img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .user_cetificate_name h2 {
+    font-size: 24px;
+    margin: 20px;
+  }
+  .pm-certificate-title h2 {
+    font-size: 12px;
+  }
+
+  .user_cetificate_description h2 {
+    font-size: 16px;
+  }
+  .user_certificate_userimg {
+    margin-bottom: 20px;
+  }
+  .user_certificate_username h2 {
+    font-size: 22px;
+  }
+  .user_certificate_username p {
+    font-size: 22px;
+  }
+
+  .user_certificate_date h2 {
+    font-size: 12px;
+  }
+
+  .user_certificate_date p {
+    font-size: 12px;
+  }
+  .user_certificate_organization h2 {
+    font-size: 9px;
+  }
+
+  .user_certificate_organization p {
+    font-size: 12px;
+  }
 }
